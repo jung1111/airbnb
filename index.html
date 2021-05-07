@@ -48,31 +48,34 @@
                                             </div>
                                         </div>
                                     </fieldset>
+                                    <!-- input 시작 -->
                                     <div class="input-form">
-                                        <div class="input-form-group">           
-                                            <div class="place">
+                                        <ul class="input-form-group">           
+                                            <li class="place">
                                                 <label class="place-label" for="bigsearch">
                                                     <div class="text-box">
                                                         <div class="title">위치</div>
                                                         <input class="text" id="bigsearch" role="combobox" value="" name="query" placeholder="어디로 여행가세요?" required="" data-testid="structured">
                                                     </div>
                                                 </label>
-                                            </div>                                         
-                                            <div class="cheak">                                           
+                                            </li>                                         
+                                            <li class="cheak">                                           
                                                 <div role="button" tabindex="0" class="cheak-in">
                                                     <div class="text-box">
                                                         <div class="title">체크인</div>
                                                         <div class="text">날짜 입력</div>
                                                     </div>
-                                                </div>                                                                                       
+                                                </div> 
+                                            </li>
+                                            <li class="cheak">                                                                                    
                                                 <div role="button" tabindex="0" class="cheak-out">
                                                     <div class="text-box">
                                                         <div class="title">체크아웃</div>
                                                         <div class="text">날짜 입력</div>
                                                     </div>
                                                 </div>                                              
-                                            </div>
-                                            <div class="guest-search">
+                                            </li>
+                                            <li class="guest-search">
                                                <div role="button" tabindex="0" class="guest">
                                                    <div class="text-box">
                                                        <div class="title">인원</div>
@@ -85,14 +88,227 @@
                                                         <div class="search-text">검색</div> 
                                                     </div>                                                   
                                                 </button>                                           
-                                            </div>
-
+                                            </li>
+                                        </ul>
+                                        <!-- 위치 시작 -->
+                                        <div class="place-pop">
+                                            <div class="text-box">
+                                                <span class="icon"></span>
+                                                <span class="text">가까운 여행지 둘러보기</span>
+                                            </div>    
                                         </div>
+                                        <!-- 위치 끝 -->
+                                        <!-- 날짜 시작 -->
+                                        <div class="cheak-pop">
+                                            <ul class="cheak-tab">
+                                                <li class="calendar"><a href="#" class="on">달력</a></li>
+                                                <li class="free"><a href="#">자유로운 일정</a></li>
+                                            </ul>
+                                            <div class="calendar-box">
+                                                <!-- 달력 -->
+                                            </div>
+                                            <div class="free-box">
+                                                <h2>숙박 기간을 선택하세요.</h2>
+                                                <ul class="week">
+                                                    <li><a href="#" class="on">주말</a></li>
+                                                    <li><a href="#">일주일</a></li>
+                                                    <li><a href="#">한 달</a></li>
+                                                </ul>
+                                                <h2>여행 날짜를 선택하세요.</h2>
+                                                <ul class="month">
+                                                    <li><a href="#" class="on"><span></span>5월</a></li>
+                                                    <li><a href="#"><span></span>6월</a></li>
+                                                    <li><a href="#"><span></span>7월</a></li>
+                                                    <li><a href="#"><span></span>8월</a></li>
+                                                    <li><a href="#"><span></span>9월</a></li>
+                                                    <li><a href="#"><span></span>10월</a></li>
+                                                </ul>
+                                            </div>                                        
+                                        </div>
+                                        <!-- 날짜 끝 -->
+                                        <!-- 인원 시작 -->
+                                        <div class="guest-pop">
+                                            <ul class="age">
+                                                <li>
+                                                    <div class="title">
+                                                        <h2>성인</h2>
+                                                        <span>만 13세 이상</span>
+                                                    </div>
+                                                    <div class="button-box" id="stepper-adults">
+                                                        <button class="minus" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div class="person">
+                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                        </div>
+                                                        <button class="plus" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28m-14-14v28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>                                                    
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        <h2>어린이</h2>
+                                                        <span>만 2세 ~ 12세</span>
+                                                    </div>
+                                                    <div class="button-box" id="stepper-adults">
+                                                        <button class="minus" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div class="person">
+                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                        </div>
+                                                        <button class="plus" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28m-14-14v28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>                                                    
+                                                </li>
+                                                <li>
+                                                    <div class="title">
+                                                        <h2>유아</h2>
+                                                        <span>만 2세 미만</span>
+                                                    </div>
+                                                    <div class="button-box" id="stepper-adults">
+                                                        <button class="minus" type="button" disabled="" aria-label="값 내리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-decrease-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <div class="person">
+                                                            <span aria-hidden="true" data-testid="stepper-adults-value">0</span>
+                                                        </div>
+                                                        <button class="plus" type="button" aria-label="값 올리기" aria-describedby="searchFlow-title-label-stepper-adults" data-testid="stepper-adults-increase-button">
+                                                            <span class="">
+                                                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block;margin: auto; fill: none; height: 12px; width: 12px; stroke: currentcolor; stroke-width: 5.33333; overflow: visible;">
+                                                                    <path d="m2 16h28m-14-14v28"></path>
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                    </div>                                                    
+                                                </li>
+
+                                            </ul>    
+                                        </div>
+                                        <!-- 인원 끝 -->
                                     </div>
+                                    <!-- input 끝 -->                                   
                                 </form>    
                             </div>
                         </div>
                     </div> <!-- tab-box -->
+
+                    <!-- 글로벌 팝업 시작 -->
+                    <div class="global">
+                        <!-- 닫기버튼 -->
+                        <button aria-label="닫기" type="button" class="close">
+                            <span class="close-icon">
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
+                                    <path d="m6 6 20 20"></path>
+                                    <path d="m26 6-20 20"></path>
+                                </svg>
+                            </span>
+                        </button>
+                        <!-- 언어와 지역 -->
+                        <div class="text-box">
+                            <div class="tab">
+                                <button type="button" class="language">
+                                    <span class="title">언어와 지역</span>
+                                </button>
+                                <button type="button" class="cash">
+                                    <span class="title">통화</span>
+                                </button>
+                            </div>
+                            <section>
+                                <div class="box">                                
+                                    <h2 class="title">추천 언어 및 지역</h2>                                   
+                                    <ul class="list">
+                                        <li>
+                                            <a class="" href="/?locale=en&amp;country_override=US">
+                                                <div>English</div>
+                                                <div class="txt">United States</div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="" href="/?locale=en-GB&amp;country_override=GB">
+                                                <div>English</div>
+                                                <div class="txt">United Kingdom</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="box">                               
+                                    <h2 class="title">언어와 지역을 선택하세요</h2>                                 
+                                    <ul class="list">
+                                        <li class="">
+                                            <a class="" href="/?locale=ko&amp;country_override=KR">
+                                                <div>한국어</div>
+                                                <div class="txt">대한민국</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a class="" href="/?locale=az&amp;country_override=AZ">
+                                                <div>Azərbaycan dili</div>
+                                                <div class="txt">Azərbaycan</div>
+                                            </a>
+                                        </li>                           
+                                        <li class="">
+                                            <a class="" href="/?locale=ca&amp;country_override=ES">
+                                                <div>Català</div>
+                                                <div class="txt">Espanya</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a class="" href="/?locale=cs&amp;country_override=CZ">
+                                                <div>Čeština</div>
+                                                <div class="txt">Česká republika</div>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a class="" href="/?locale=sr-ME&amp;country_override=ME">
+                                                <div>Crnogorski</div>
+                                                <div class="txt">Crna Gora</div>
+                                            </a>
+                                        </li>                       
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                    <!-- 글로벌 팝업 끝 -->
+                    <!-- 마이페이지 시작 -->
+                    <div class="mypage-list">
+                        <ul>
+                            <li><a href="#">회원가입</a></li>
+                            <li><a href="#">로그인</a></li>                       
+                        </ul>
+                        <ul>
+                            <li><a href="#">숙소 호스트 되기</a></li>
+                            <li><a href="#">체험 호스팅하기</a></li>
+                            <li><a href="#">도움말</a></li>
+                        </ul>
+                    </div>    
+                    <!-- 마이페이지 끝 -->
                     <div class="icon-box">
                         <nav class="icon-box-nav" aria-label="메인">
                             <div class="icon-box-nav-host">
@@ -126,8 +342,14 @@
         </div>
         <main id="site-content" tabindex="-1">
             <div class="main-visual">
-                <div class="main-visual-box">
-                    <img class="img" src="img/main-visual.png" alt="" />
+                <div class="main-visual-box">      
+                    <picture>
+                        <source srcset="https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=2560 1x, https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=2560 2x" media="(min-width: 1440px)">
+                        <source srcset="https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=960 1x, https://a0.muscache.com/im/pictures/166791ff-bc82-4b88-ba3d-49be1d462dce.jpg?im_w=1920 2x" media="(min-width: 950px)">
+                        <source srcset="https://a0.muscache.com/im/pictures/1c18c4c8-5ecb-4a94-9301-1e02b061339b.jpg?im_w=720 1x, https://a0.muscache.com/im/pictures/1c18c4c8-5ecb-4a94-9301-1e02b061339b.jpg?im_w=1440 2x" media="(min-width: 744px)">
+                        <source srcset="https://a0.muscache.com/im/pictures/80ac6baf-ea77-4d14-bbb7-c91a4230b20a.jpg?im_w=320 1x, https://a0.muscache.com/im/pictures/80ac6baf-ea77-4d14-bbb7-c91a4230b20a.jpg?im_w=720 2x">
+                        <img class="img" alt="" id="FMP-target" src="https://a0.muscache.com/im/pictures/80ac6baf-ea77-4d14-bbb7-c91a4230b20a.jpg?im_q=highq&amp;im_w=720">
+                    </picture>     
                 </div>
                 <div class="main-visual-text">
                     <span class="text">호스트 분들이 있기에 가능합니다</span>
@@ -257,7 +479,7 @@
             </div><!-- 2 -->
             <div class="main-content3">
                <div class="content-text">
-                    <span class="title">호스트가<br>되어보세요</span>
+                    <span class="title">호스트가<br> 되어보세요</span>
                     <span class="sub-title">숙소를 공유하여 부수입을 올리고 새로운<br>가능성을 만나세요.</span>
                     <a href="https://www.airbnb.co.kr/host/homes?_ga=2.84760473.1472197790.1618902800-1324964465.1618902800&_set_bev_on_new_domain=1618935285_YTQ1YmU5ZTNmOWZl" class="more">자세히 알아보기</a>
                </div>
@@ -404,76 +626,70 @@
                     </ul>
                 </section>
             </div>
-            <div class="_1wsqynx">
-                <section class="_1tu1axq">
-                    <div class="_jro6t0">
-                        <span class="_19c5bku">
-                            <a href="/account-settings/language" class="_1kejnocv">
-                                <span class="_krjbj">언어 선택</span>
-                                <span class="_14tkmhr">
+            <div class="footer-info">
+                <section class="footer-info-box">
+                    <div class="link">
+                        <div class="year">© 2021 Airbnb, Inc.</div>
+                        <div class="link-list">
+                            <span class="dot">·</span>
+                            <a href="/terms/privacy_policy" class="_o06542u">개인정보 처리방침</a>
+                            <span class="dot">·</span>
+                            <a href="/terms" class="_o06542u">이용약관</a>
+                            <span class="dot">·</span>
+                            <a href="/sitemaps/v2" class="_o06542u">사이트맵</a>
+                            <span class="dot">·</span>
+                            <a target="_blank" href="/home/updated_cancellation_policies?korean_strict_policy=true#strict" class="_o06542u">한국의 변경된 환불 정책</a>
+                            <span class="dot">·</span>
+                            <a target="_blank" href="/about/company-details" class="_o06542u">회사 세부정보</a>
+                        </div>
+                    </div>
+                    <!-- link -->
+                    <div class="language">
+                        <span class="kr">
+                            <a href="/account-settings/language" class="language-link" alt="언어 선택">
+                                <span class="kr-icon">
                                     <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 16px; width: 16px; fill: currentcolor;"><path d="m8.002.25a7.77 7.77 0 0 1 7.748 7.776 7.75 7.75 0 0 1 -7.521 7.72l-.246.004a7.75 7.75 0 0 1 -7.73-7.513l-.003-.245a7.75 7.75 0 0 1 7.752-7.742zm1.949 8.5h-3.903c.155 2.897 1.176 5.343 1.886 5.493l.068.007c.68-.002 1.72-2.365 1.932-5.23zm4.255 0h-2.752c-.091 1.96-.53 3.783-1.188 5.076a6.257 6.257 0 0 0 3.905-4.829zm-9.661 0h-2.75a6.257 6.257 0 0 0 3.934 5.075c-.615-1.208-1.036-2.875-1.162-4.686l-.022-.39zm1.188-6.576-.115.046a6.257 6.257 0 0 0 -3.823 5.03h2.75c.085-1.83.471-3.54 1.059-4.81zm2.262-.424c-.702.002-1.784 2.512-1.947 5.5h3.904c-.156-2.903-1.178-5.343-1.892-5.494l-.065-.007zm2.28.432.023.05c.643 1.288 1.069 3.084 1.157 5.018h2.748a6.275 6.275 0 0 0 -3.929-5.068z"></path></svg>
                                 </span>
-                                <span class="_bjxj6b">한국어 (KR)</span>
+                                <span class="kr-text">한국어 (KR)</span>
                             </a>
                         </span>
-                        <span class="_19c5bku">
-                            <a href="/account-settings/currency" class="_1kejnocv">
-                                <span class="_krjbj">통화 선택</span>
-                                <span class="_14tkmhr">₩</span>
-                                <span class="_bjxj6b">KRW</span>
+                        <span class="kr">
+                            <a href="/account-settings/currency" class="language-link" alt="통화 선택">
+                                <span class="kr-icon">₩</span>
+                                <span class="kr-text">KRW</span>
                             </a>
-                        </span>
+                        </span>   
                     </div>
-                </div>
-                <div class="_2ms5qb">
-                    <ul class="_115qwnm">
-                        <li class="_kdkpwk">
-                            <a target="_blank" href="https://www.facebook.com/AirbnbKorea" class="_s7cvp1u">
+                    <!-- language  -->
+                    <ul class="sns">
+                        <li class="">
+                            <a target="_blank" href="https://www.facebook.com/AirbnbKorea" class="">
                                 <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="페이스북으로 이동하기" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m8 14.41v-4.17c0-.42.35-.81.77-.81h2.52v-2.08c0-4.84 2.48-7.31 7.42-7.35 1.65 0 3.22.21 4.69.64.46.14.63.42.6.88l-.56 4.06c-.04.18-.14.35-.32.53-.21.11-.42.18-.63.14-.88-.25-1.78-.35-2.8-.35-1.4 0-1.61.28-1.61 1.73v1.8h4.52c.42 0 .81.42.81.88l-.35 4.17c0 .42-.35.71-.77.71h-4.21v16c0 .42-.35.81-.77.81h-5.21c-.42 0-.8-.39-.8-.81v-16h-2.52a.78.78 0 0 1 -.78-.78" fill-rule="evenodd"></path></svg>
                             </a>
                         </li>
-                        <li class="_kdkpwk">
-                            <a target="_blank" href="https://twitter.com/airbnb" class="_s7cvp1u">
+                        <li class="">
+                            <a target="_blank" href="https://twitter.com/airbnb" class="">
                                 <svg viewBox="0 0 32 32" role="img" aria-hidden="false" aria-label="트위터로 이동하기" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m31 6.36c-1.16.49-2.32.82-3.55.95 1.29-.76 2.22-1.87 2.72-3.38a13.05 13.05 0 0 1 -3.91 1.51c-1.23-1.28-2.75-1.94-4.51-1.94-3.41 0-6.17 2.73-6.17 6.12 0 .49.07.95.17 1.38-4.94-.23-9.51-2.6-12.66-6.38-.56.95-.86 1.97-.86 3.09 0 2.07 1.03 3.91 2.75 5.06-1-.03-1.92-.3-2.82-.76v.07c0 2.89 2.12 5.42 4.94 5.98-.63.17-1.16.23-1.62.23-.3 0-.7-.03-1.13-.13a6.07 6.07 0 0 0 5.74 4.24c-2.22 1.74-4.78 2.63-7.66 2.63-.56 0-1.06-.03-1.43-.1 2.85 1.84 6 2.76 9.41 2.76 7.29 0 12.83-4.01 15.51-9.3 1.36-2.66 2.02-5.36 2.02-8.09v-.46c-.03-.17-.03-.3-.03-.33a12.66 12.66 0 0 0 3.09-3.16" fill-rule="evenodd"></path></svg>
                             </a>
                         </li>
-                        <li class="_kdkpwk">
-                            <a target="_blank" href="https://instagram.com/airbnb" class="_s7cvp1u">
+                        <li class="">
+                            <a target="_blank" href="https://instagram.com/airbnb" class="">
                                 <svg viewBox="0 0 24 24" role="img" aria-hidden="false" aria-label="인스타그램으로 이동하기" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m23.09.91c-.61-.61-1.33-.91-2.17-.91h-17.84c-.85 0-1.57.3-2.17.91s-.91 1.33-.91 2.17v17.84c0 .85.3 1.57.91 2.17s1.33.91 2.17.91h17.84c.85 0 1.57-.3 2.17-.91s.91-1.33.91-2.17v-17.84c0-.85-.3-1.57-.91-2.17zm-14.48 7.74c.94-.91 2.08-1.37 3.4-1.37 1.33 0 2.47.46 3.41 1.37s1.41 2.01 1.41 3.3-.47 2.39-1.41 3.3-2.08 1.37-3.41 1.37c-1.32 0-2.46-.46-3.4-1.37s-1.41-2.01-1.41-3.3.47-2.39 1.41-3.3zm12.66 11.63c0 .27-.09.5-.28.68a.92.92 0 0 1 -.67.28h-16.7a.93.93 0 0 1 -.68-.28.92.92 0 0 1 -.27-.68v-10.13h2.2a6.74 6.74 0 0 0 -.31 2.05c0 2 .73 3.71 2.19 5.12s3.21 2.12 5.27 2.12a7.5 7.5 0 0 0 3.75-.97 7.29 7.29 0 0 0 2.72-2.63 6.93 6.93 0 0 0 1-3.63c0-.71-.11-1.39-.31-2.05h2.11v10.12zm0-13.95c0 .3-.11.56-.31.77a1.05 1.05 0 0 1 -.77.31h-2.72c-.3 0-.56-.11-.77-.31a1.05 1.05 0 0 1 -.31-.77v-2.58c0-.29.11-.54.31-.76s.47-.32.77-.32h2.72c.3 0 .56.11.77.32s.31.47.31.76z" fill-rule="evenodd"></path></svg>
                             </a>
                         </li>
-                        <li class="_kdkpwk">
-                            <a target="_blank" href="https://blog.naver.com/airbnbkr" class="_s7cvp1u">
+                        <li class="">
+                            <a target="_blank" href="https://blog.naver.com/airbnbkr" class="">
                                 <svg viewBox="0 0 1024 1024" role="img" aria-hidden="false" aria-label="네이버 블로그로 이동하기" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m984 1024h-944c-22.1 0-40-17.9-40-40v-944c0-22.1 17.9-40 40-40h944c22.1 0 40 17.9 40 40v944c0 22.1-17.9 40-40 40z" fill="#00c73c"></path><path d="m757 203.2h-490.4c-70.4 0-127.5 57.1-127.5 127.5v303.5c0 70.7 57.3 127.9 127.9 127.9h173.8l58.7 101.6c5.4 9.3 18.9 9.3 24.2 0l58.7-101.6h174.2c70.6 0 128.5-57.8 128.5-128.5v-302.4c0-70.7-57.3-128-128.1-128z" fill="#fff"></path><g fill="#ff812c"><path d="m390.7 495.6c0 38.7-28 68.5-62.1 68.5-17.4 0-30.1-6-38.7-15.8v12.2h-38.9v-173.1h38.9v55.5c8.6-9.9 21.3-15.8 38.7-15.8 34 0 62.1 29.8 62.1 68.5zm-36.4 0c0-21.1-14-34.3-33.4-34.3s-33.4 13.2-33.4 34.3 14 34.3 33.4 34.3c19.3 0 33.4-13.2 33.4-34.3z"></path><path d="m477.6 495.6c0-38.7 30.6-68.5 68.8-68.5s68.8 29.9 68.8 68.5c0 38.7-30.6 68.5-68.8 68.5s-68.8-29.8-68.8-68.5zm101.1 0c0-19.9-14-33.2-32.3-33.2s-32.3 13.2-32.3 33.2c0 19.9 14 33.2 32.3 33.2 18.2 0 32.3-13.2 32.3-33.2z"></path><path d="m704.6 616.1c34.5 0 68.5-18.4 68.5-62.1v-123.3h-37.9v13.2c-8.6-10.6-21-16.9-37.9-16.9-36.9 0-63.9 30.1-63.9 66 0 35.8 27 65.9 63.9 65.9 16.9 0 29.3-6.2 37.9-16.9v12c0 18.4-11.2 27.8-29.3 27.8h-1.3zm-.7-90.5c-19.9 0-34-13.2-34-32.6s14-32.6 34-32.6c19.9 0 34 13.2 34 32.6s-14.1 32.6-34 32.6z"></path><path d="m394.3 382.7v35.1c13.4 2.6 21.3 11.8 21.3 27.4v115.3h38.9v-115.3c0-40.3-28.6-59.4-60.2-62.5z"></path></g></svg>
                             </a>
                         </li>
-                        <li class="_kdkpwk">
-                            <a rel="noopener noreferrer" target="_blank" href="https://post.naver.com/airbnb_kr" class="_s7cvp1u">
+                        <li class="">
+                            <a target="_blank" href="https://post.naver.com/airbnb_kr" class="">
                                 <svg enable-background="new 0 0 1024 1024" viewBox="0 0 1024 1024" role="img" aria-hidden="false" aria-label="네이버 포스트로 이동하기" focusable="false" style="height: 18px; width: 18px; display: block; fill: currentcolor;"><path d="m984 1024h-944c-22.1 0-40-17.9-40-40v-944c0-22.1 17.9-40 40-40h944c22.1 0 40 17.9 40 40v944c0 22.1-17.9 40-40 40z" fill="#fff"></path><g fill="#00c73c"><path d="m0 198h1024v7h-1024z"></path><path d="m0 405h1024v7h-1024z"></path><path d="m0 612h1024v7h-1024z"></path><path d="m0 819h1024v7h-1024z"></path></g><path d="m307 537 188.2 324.1c7.5 12.9 26.1 12.9 33.6 0l188.2-324.1z" fill="#f4e49d"></path><path d="m307 0h410v537h-410z" fill="#00e831"></path><path d="m392 0h240v537h-240z" fill="#00c73c"></path><path d="m392 148.5v240h240v-240zm188 182h-47.8l-41.2-62.8v62.8h-47v-124h45.8l42.2 62.4v-62.4h48z" fill="#fff"></path><path d="m632 0h85v537h-85z" fill="#00a32a"></path><path d="m528.8 861.1 188.2-324.1h-85l-119.5 333.7c6.3-.1 12.6-3.3 16.3-9.6z" fill="#e0c141"></path><path d="m448.8 781.2 46.4 79.9c7.5 12.9 26.1 12.9 33.6 0l46.4-79.9z" fill="#2d2d2d"></path></svg>
                             </a>
                         </li>
                     </ul>
-                </div>
-            </div>
-            <div class="_zyu73r">
-                <div class="_pd8gea">
-                    <div class="_9q359r">
-                        <div class="_1br4kkl" dir="ltr">© 2021 Airbnb, Inc.</div>
-                        <div class="_opoa3c">
-                            <span class="_j8ldew">
-                                <span class="_10wqwyj" aria-hidden="true">·</span>
-                            </span>
-                            <a href="/terms/privacy_policy" class="_o06542u">개인정보 처리방침</a>
-                            <span class="_10wqwyj" aria-hidden="true">·</span>
-                            <a href="/terms" class="_o06542u">이용약관</a>
-                            <span class="_10wqwyj" aria-hidden="true">·</span>
-                            <a href="/sitemaps/v2" class="_o06542u">사이트맵</a>
-                            <span class="_10wqwyj" aria-hidden="true">·</span>
-                            <a target="_blank" href="/home/updated_cancellation_policies?korean_strict_policy=true#strict" class="_o06542u">한국의 변경된 환불 정책</a>
-                            <span class="_10wqwyj" aria-hidden="true">·</span>
-                            <a target="_blank" href="/about/company-details" class="_o06542u">회사 세부정보</a>
-                        </div>
-                    </div>
+                    <!-- sns  -->
+                   
                 </section>
             </div>
         </footer>
