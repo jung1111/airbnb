@@ -158,7 +158,7 @@ document.querySelector('.plus.adult').addEventListener("click", function(event){
     /** 추가기능 8명 이상은 count X */
 });
 document.querySelector('.plus.children').addEventListener("click", function(event){
-    event.stopPropagation();
+    event.stopPropagation();// 부모요소에 적용하는거 막기
     let personChildren = document.querySelector('.person.children'); 
     personChildren.innerText = Number(personChildren.innerText) + 1;
     /** 추가기능 8명 이상은 count X */
@@ -168,4 +168,17 @@ document.querySelector('.plus.kids').addEventListener("click", function(event){
     let personKids = document.querySelector('.person.kids'); 
     personKids.innerText = Number(personKids.innerText) + 1;
     /** 추가기능 8명 이상은 count X */
+});
+
+
+document.querySelector('button.area-button').addEventListener("click", function(event){
+    event.stopPropagation();
+    document.querySelector('.global-wap').style.display = ('block');
+    document.querySelector('.global').style.display = ('block');
+});
+
+document.querySelector('.close').addEventListener("click", function(event){
+    event.stopPropagation();
+    document.querySelector('.global-wap').style.display = ('none');
+    document.querySelector('.global').style.display = ('none');
 });
